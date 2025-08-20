@@ -1,23 +1,25 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useEffect, useState, useRef } from "react"
-import { motion } from "framer-motion"
-import { Code2, Cpu, Database, Globe, Smartphone, Zap } from "lucide-react"
+import { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
+import { Code2, Cpu, Database, Globe, Smartphone, Zap } from "lucide-react";
 
 interface FloatingEl {
-  id: number
-  Icon: React.ComponentType<{ className?: string }>
-  color: string
-  delay: number
-  startY: number
+  id: number;
+  Icon: React.ComponentType<{ className?: string }>;
+  color: string;
+  delay: number;
+  startY: number;
 }
 
 export default function FloatingElements() {
-  // ── Generate positions once per session (useRef so they don’t re-randomize) ─
-  const elements = useRef<FloatingEl[]>(
-    [
+  const [elements, setElements] = useState<FloatingEl[]>([]);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const els = [
       { Icon: Code2, color: "text-blue-400", delay: 0 },
       { Icon: Cpu, color: "text-purple-400", delay: 1 },
       { Icon: Database, color: "text-green-400", delay: 2 },
@@ -28,13 +30,12 @@ export default function FloatingElements() {
       ...el,
       id: idx,
       startY: Math.random() * window.innerHeight,
-    })),
-  ).current
+    }));
 
-  // ── Render nothing during SSR ──────────────────────────────────────────────
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => setMounted(true), [])
-  if (!mounted) return null
+    setElements(els);
+    setMounted(true);
+  }, []);
+  if (!mounted) return null;
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
@@ -59,5 +60,5 @@ export default function FloatingElements() {
         </motion.div>
       ))}
     </div>
-  )
+  );
 }

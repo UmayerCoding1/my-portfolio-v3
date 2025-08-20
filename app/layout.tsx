@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Md. Umayer Hossain - Full Stack Developer | MERN Stack Expert",
+  icons: {
+    icon: "favicon.ico", 
+  },
   description:
     "Experienced Full Stack Web Developer specializing in MERN stack development. Creating innovative digital solutions with React, Node.js, MongoDB, and modern web technologies. Based in Bangladesh, working globally.",
   keywords: [
@@ -52,7 +55,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
