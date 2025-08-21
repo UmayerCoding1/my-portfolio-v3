@@ -7,10 +7,10 @@ import { Button } from "@/components/ui/button"
 
 export default function Footer() {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/umayerhossain", label: "GitHub", color: "hover:text-gray-300" },
-    { icon: Linkedin, href: "https://linkedin.com/in/umayerhossain", label: "LinkedIn", color: "hover:text-blue-400" },
-    { icon: Twitter, href: "https://twitter.com/umayerhossain", label: "Twitter", color: "hover:text-cyan-400" },
-    { icon: Mail, href: "mailto:umayer@example.com", label: "Email", color: "hover:text-green-400" },
+    { icon: Github, href: "https://github.com/UmayerCoding1", label: "GitHub", color: "hover:text-gray-300" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/umayer-hossain-604999351/", label: "LinkedIn", color: "hover:text-blue-400" },
+    { icon: Twitter, href: "https://x.com/Umayer_dev", label: "Twitter", color: "hover:text-cyan-400" },
+    { icon: Mail, href: "mailto:umayer.hossain10@gmail.com", label: "Email", color: "hover:text-green-400" },
   ]
 
   const quickLinks = [
@@ -55,8 +55,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 leading-relaxed mb-6 max-w-md">
-              Recent Computer Science graduate passionate about creating amazing web experiences. Ready to start my
-              career and contribute to innovative projects while continuously learning and growing.
+              First-year BBS student passionate about technology and web development. Eager to start my career, contribute to innovative projects, and continuously learn and grow.
             </p>
             <div className="flex items-center gap-4 text-sm text-gray-400">
               <div className="flex items-center gap-1">
@@ -109,13 +108,13 @@ export default function Footer() {
                 <span className="text-white font-medium">Email:</span>
                 <br />
                 <a href="mailto:umayer@example.com" className="hover:text-cyan-400 transition-colors">
-                  umayer@example.com
+                  umayer.hossain10@gmail.com
                 </a>
               </p>
               <p className="text-gray-400">
                 <span className="text-white font-medium">Location:</span>
                 <br />
-                Dhaka, Bangladesh
+                Chottogram, Bangladesh
               </p>
               <p className="text-gray-400">
                 <span className="text-white font-medium">Status:</span>
@@ -187,8 +186,7 @@ export default function Footer() {
             <Coffee className="w-4 h-4 text-yellow-600" /> by a fresh graduate ready to make an impact!
           </p>
           <p className="text-gray-500 text-xs">
-            © {new Date().getFullYear()} Md. Umayer Hossain. All rights reserved. • Built with Next.js, TypeScript &
-            Framer Motion
+            © {new Date().getFullYear()} Md. Umayer Hossain. All rights reserved.
           </p>
         </motion.div>
       </div>

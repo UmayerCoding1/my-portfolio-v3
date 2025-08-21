@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { FaHtml5,FaReact,FaNodeJs,FaGitAlt ,FaGithub   } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiNextdotjs,SiTypescript,SiExpress,SiMongoose,SiPostman   } from "react-icons/si";
+import { SiNextdotjs,SiTypescript,SiExpress,SiMongoose,SiPostman ,SiRedux  } from "react-icons/si";
 import { RiTailwindCssFill,RiFirebaseFill  } from "react-icons/ri";
 import { DiResponsive,DiMongodb  } from "react-icons/di";
 import { TbApi } from "react-icons/tb";
@@ -31,6 +31,7 @@ const skillCategories = {
     { name: "JavaScript", Icon: IoLogoJavascript, level: 80 },
     { name: "React", Icon: FaReact, level: 85 },
     { name: "Next.js", Icon: SiNextdotjs, level: 75 },
+    { name: "Redux Toolkit", Icon: SiRedux, level: 50 },
     { name: "TypeScript", Icon: SiTypescript, level: 70 },
     { name: "Tailwind CSS", Icon: RiTailwindCssFill, level: 85 },
     { name: "Responsive Design", Icon: DiResponsive, level: 80 },
@@ -67,6 +68,7 @@ const skillCategories = {
     { name: "JavaScript", Icon: IoLogoJavascript, level: 80 },
     { name: "React", Icon: FaReact, level: 85 },
     { name: "Next.js", Icon: SiNextdotjs, level: 75 },
+    { name: "Redux Toolkit", Icon: SiRedux, level: 50 },
     { name: "TypeScript", Icon: SiTypescript, level: 70 },
     { name: "Tailwind CSS", Icon: RiTailwindCssFill, level: 85 },
     { name: "Node.js", Icon: FaNodeJs, level: 80 },
@@ -322,6 +324,7 @@ const skillCategories = {
                           ${skill.name === 'VS Code' && 'fill-[#2DB2F5]'}
                           ${skill.name === 'Postman' && 'fill-[#EE7245]'}
                           ${skill.name === 'Stripe' && 'fill-[#2DB2F5]'}
+                          ${skill.name === 'Redux Toolkit' && 'fill-[#7248B6]'}
                          
                           
                           `} />

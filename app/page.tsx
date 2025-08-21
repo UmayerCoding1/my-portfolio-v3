@@ -4,16 +4,16 @@ import AboutSection from "@/components/about-section"
 import SkillsRadar from "@/components/skills-radar"
 import ProjectsShowcase from "@/components/projects-showcase"
 import CodePlayground from "@/components/code-playground"
-import BlogSection from "@/components/blog-section"
-import TestimonialsCarousel from "@/components/testimonials-carousel"
+// import BlogSection from "@/components/blog-section"
+// import TestimonialsCarousel from "@/components/testimonials-carousel"
 import ContactHub from "@/components/contact-hub"
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 import ScrollProgress from "@/components/scroll-progress"
 import ParticleSystem from "@/components/particle-system"
-import ThemeToggle from "@/components/theme-toggle"
+// import ThemeToggle from "@/components/theme-toggle"
 import FloatingElements from "@/components/floating-elements"
-import SoundToggle from "@/components/sound-toggle"
+// import SoundToggle from "@/components/sound-toggle"
 import { HeroSection } from "@/components/hero-section"
 
 export default function Home() {
@@ -23,16 +23,16 @@ export default function Home() {
       <FloatingElements />
       <ScrollProgress />
       <Navbar />
-      <ThemeToggle />
-      <SoundToggle />
+      {/* <ThemeToggle /> */}
+      {/* <SoundToggle /> */}
       <HeroSection />
       <AboutSection />
       {/* <InteractiveTimeline /> */}
       <SkillsRadar />
       <ProjectsShowcase />
       <CodePlayground />
-      <BlogSection />
-      <TestimonialsCarousel />
+      {/* <BlogSection /> */}
+      {/* <TestimonialsCarousel /> */}
       <ContactHub />
       <Footer />
     </main>
