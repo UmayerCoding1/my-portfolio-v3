@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { Github, ExternalLink } from "lucide-react";
-const SmarJobAi = "smartJobAi.png";
+import { projects } from "@/lib/mock-data";
 
 type projectType =
   | {
@@ -52,163 +52,7 @@ export default function ProjectsShowcase() {
     // "Academic",
   ];
 
-  const projects = [
-    {
-      id: 1,
-      title: "Smart Job AI",
-      description:
-        "An AI-powered job matching platform that connects job seekers with their perfect opportunities using intelligent resume analysis and personalized job recommendations.",
-      image: SmarJobAi,
-      category: "Full-stack",
-      tech: [
-        "Next js",
-        "TypeScript",
-        "Mongoose",
-        "Redux Toolkit",
-        "Zod",
-        "React-hook-form",
-        "Tanstack Query",
-        "Axios",
-        "ImageKit",
-        "bcryptjs",
-        "Json Web Token",
-        "Tailwind CSS",
-        "Shadcn UI",
-        "react-countup",
-        "react-day-picker",
-        "react-redux",
-        "recharts",
-        "sonner",
-        "lucide-react",
-        "framer-motion",
-      ],
-      github: "https://github.com/UmayerCoding1/next-smart-job-ai",
-      live: "https://next-smart-job-ai.vercel.app",
-      date: "2025",
-      status: "Development",
-    },
-    {
-      id: 2,
-      title: "Carsetgo",
-      description:
-        "CarSetGo is a modern MERN stack platform for renting and selling cars, enhanced with AI features like auto description generation and image analysis. It supports user, seller, and admin roles with secure JWT auth, Stripe payments, Cloudinary uploads, and a smooth UI using Tailwind and Framer Motion.",
-      image: "https://umayer--hossain.vercel.app/assets/carsetgo-D3GCAZXZ.png",
-      category: "Full-stack",
-      tech: [
-        "mongoose",
-        "Express",
-        "React",
-        "Node.js",
-        "Tailwind CSS",
-        "axios",
-        "bcryptjs",
-        "googleapis",
-        "react-router-dom",
-        "lucide-react",
-        "sonner",
-        "tanstack-query",
-        "react-hook-form",
-        "react-dropzone",
-        "react-chartjs-2",
-        "motion",
-        "chart.js",
-        "json webtoken",
-        "helmet",
-        "stripe",
-        "multer",
-        "cloudinary",
-      ],
-      client: "https://github.com/UmayerCoding1/CarSetGo/tree/main/client",
-      server: "https://github.com/UmayerCoding1/CarSetGo/tree/main/server",
-      live: "https://carsetgo.vercel.app",
-      date: "2025",
-      status: "Production",
-    },
-    {
-      id: 3,
-      title: "TravelBD",
-      description:
-        "A full-stack travel agency website featuring user authentication, destination management, booking system, and payment integration. Users can browse destinations, make bookings, and process payments securely. Admins can manage destinations, track bookings, and view analytics through an intuitive dashboard.",
-      image: "https://umayer--hossain.vercel.app/assets/travelbd-CBjAG_vX.png",
-      category: "Full-stack",
-      tech: [
-        "@types/mongoose-aggregate-paginate-v2",
-        "bcrypt",
-        "cloudinary",
-        "cookie-parser",
-        "cors",
-        "dotenv",
-        "express",
-        "jsonwebtoken",
-        "mongoose",
-        "multer",
-        "npm",
-        "sslcommerz-lts",
-        "aos",
-        "axios",
-        "chart.js",
-        "date-fns",
-        "dayjs",
-        "firebase",
-        "react",
-        "react-chartjs-2",
-        "react-date-range",
-        "react-datepicker",
-        "react-dom",
-        "react-helmet",
-        "react-hook-form",
-        "react-hot-toast",
-        "react-icons",
-        "react-query",
-        "react-router",
-        "react-router-dom",
-        "react-slick",
-        "swiper",
-        "tailwind-scrollbar",
-      ],
-      client: "https://github.com/UmayerCoding1/travelbd-client",
-      server: "https://github.com/UmayerCoding1/travelbd-server",
-      live: "https://travelbd-158bd.web.app",
-      date: "2024",
-      status: "Production",
-    },
-    {
-      id: 4,
-      title: "E Market Hub",
-      description:
-        "A full-stack e-commerce platform with user authentication, product management, cart functionality, and payment integration.",
-      image: "https://umayer--hossain.vercel.app/assets/ecoommers-DU9PnGyf.png",
-      category: "Full-stack",
-      tech: [
-        "MongoDB",
-        "Express",
-        "React",
-        "Node.js",
-        "Tailwind CSS",
-        "axios",
-        "react-router-dom",
-        "react-hook-form",
-        "react-icons",
-        "react-hot-toast",
-        "tanstack-query",
-        "react-tabs",
-        "swiper",
-        "firebase",
-        "react-pdf",
-        "MUI",
-        "json webtoken",
-        "helmet",
-        "sslcommerz",
-        "multer",
-        "cloudinary",
-      ],
-      client: "https://github.com/UmayerCoding1/eMarket-hub-client",
-      server: "https://github.com/UmayerCoding1/E-Market-hub-server",
-      live: "https://emarket-hub.web.app",
-      date: "2024",
-      status: "Production",
-    },
-  ];
+ 
 
   const handleSelectedProject = (projectId: number) => {
     const project = projects.find((p) => p.id === projectId);
@@ -340,18 +184,7 @@ export default function ProjectsShowcase() {
                         )}
                       </div>
 
-                      {/* <div className="flex items-center justify-between mb-4 text-sm text-gray-400">
-                        <div className="flex items-center gap-4">
-                          <div className="flex items-center gap-1">
-                            <Star className="w-4 h-4" />
-                            {p.stars}
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <GitFork className="w-4 h-4" />
-                            {p.forks}
-                          </div>
-                        </div>
-                      </div> */}
+                     
 
                       <div className="flex gap-2">
                         {p.github && (
@@ -412,54 +245,7 @@ export default function ProjectsShowcase() {
         </motion.div>
       </div>
 
-      {showSelectedProject && (
-        <div
-          onClick={() => setShowSelectedProject(false)}
-          className="absolute top-0 left-0 bg-black/50  w-full h-screen flex items-center justify-center p-3"
-        >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="bg-white  w-1/3 h-[500px] text-black text-2xl rounded-lg"
-          >
-            <p
-              className=" top-2 right-2 cursor-pointer z-10 text-2xl inline-block"
-              onClick={() => setShowSelectedProject(false)}
-            >
-              X
-            </p>
-            <Image
-              src={selectedProject?.image || "/placeholder.svg"}
-              alt={selectedProject?.title || "Project"}
-              width={500}
-              height={300}
-              className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg"
-            />
-
-            <div className="p-4">
-              <div>
-                <h2 className="text-2xl font-semibold">
-                  {selectedProject?.title}
-                </h2>
-                <p className="text-sm text-gray-500 font-medium">
-                  {selectedProject?.description}
-                </p>
-
-                <div className="flex flex-wrap gap-1  my-10">
-                  {selectedProject?.tech.map((t) => (
-                    <Badge
-                      key={t}
-                      variant="secondary"
-                      className="bg-black text-gray-300 text-xs"
-                    >
-                      {t}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      
     </section>
   );
 }
